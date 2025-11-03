@@ -13,7 +13,8 @@
       --bg-hover: #343541;
       --text-primary: #e4e6eb;
       --text-muted: #a3a3a3;
-      --accent: #d43bd1;
+      --accent: #b92f9b;
+      --accent-red: #da3c10;
       --border: #3a3b45;
     }
 
@@ -108,6 +109,11 @@
       color: #fff;
     }
 
+    button[type="reset"]:hover {
+      background: var(--accent-red);
+      color: #fff;
+    }
+
     button:active {
       transform: scale(0.98);
     }
@@ -172,22 +178,23 @@
 </head>
 <body>
   <section id="home" class="card screen active">
-    <h1>Welcome to RC Helper</h1>
+    <h1>Welcome to Or & Sable Sim Case Helper</h1>
     <p style="color:var(--text-muted);font-size:14px;">Choose an option to get started:</p>
     <div class="home-buttons">
-      <button onclick="showScreen('tutorial')">Tutorial</button>
+      <button onclick="showScreen('tutorial')">Setup</button>
       <button onclick="showScreen('checklist')">Checklist</button>
     </div>
   </section>
 
   <section id="checklist" class="card screen">
-    <h1>My small list</h1>
+    <h1>Sim Case Contents Checklist</h1>
     <ul>
-      <li><input id="i-1" type="checkbox"><label for="i-1">Buy groceries</label></li>
-      <li><input id="i-2" type="checkbox"><label for="i-2">Reply to emails</label></li>
-      <li><input id="i-3" type="checkbox"><label for="i-3">Walk the dog</label></li>
-      <li><input id="i-4" type="checkbox"><label for="i-4">Read 20 pages</label></li>
-      <li><input id="i-5" type="checkbox"><label for="i-5">Plan tomorrow</label></li>
+      <li><input id="i-1" type="checkbox"><label for="i-1">Laptop</label></li>
+      <li><input id="i-2" type="checkbox"><label for="i-2">Controller</label></li>
+      <li><input id="i-3" type="checkbox"><label for="i-3">Orqa FPV Goggles</label></li>
+      <li><input id="i-4" type="checkbox"><label for="i-4">USB-A To USB-C Cable</label></li>
+      <li><input id="i-5" type="checkbox"><label for="i-5">USB-A To 9V Barrel Jack  Cable</label></li>
+      <li><input id="i-6" type="checkbox"><label for="i-6">HDMI Cable</label></li>
     </ul>
     <button type="reset" onclick="document.querySelectorAll('input[type=checkbox]').forEach(cb=>cb.checked=false)">Deselect all</button>
     <button class="back-btn" onclick="showScreen('home')">← Back</button>
